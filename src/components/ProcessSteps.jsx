@@ -7,14 +7,14 @@ export default function ProcessSteps({ steps }) {
 
   return (
     <Reveal>
-      <div className="flex flex-col md:flex-row md:items-stretch border border-[var(--color-line-0)]">
+      <div className="flex flex-row items-stretch border border-[var(--color-line-0)]">
         {steps.map((step, i) => (
           <button
             key={step.name}
             onMouseEnter={() => setActive(i)}
             onFocus={() => setActive(i)}
             onClick={() => setActive(i)}
-            className={`relative flex-1 text-left px-6 py-6 border-b md:border-b-0 md:border-r last:border-0 transition-colors duration-200 ${
+            className={`relative flex-1 text-left px-6 py-6 border-b-0 border-r last:border-0 transition-colors duration-200 ${
               i === active ? 'bg-[var(--color-bg-2)]' : 'bg-transparent'
             } border-[var(--color-line-0)]`}
           >

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
  * /public/logo.svg (keeping the same filename) to swap it in — every
  * usage across the navbar and footer points at this one file.
  */
-export default function Logo({ className = 'h-16 md:h-20 w-auto' }) {
+export default function Logo({ className = 'h-32 md:h-40 w-auto' }) {
   return (
     <Link to="/" aria-label="Safequence — home" className="inline-flex items-center">
       <img src="/logo.svg" alt="Safequence" className={className} />

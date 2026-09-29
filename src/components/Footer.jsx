@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="border-t border-[var(--color-line-0)]">
         <div className="container-sq py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-xs text-[var(--color-ink-3)]">© {year} Safequence. All rights reserved.</p>
-          <p className="text-xs text-[var(--color-ink-3)]">Web Applications · APIs · Cloud · Microsoft 365</p>
+          <p className="text-xs text-[var(--color-ink-3)]">VAPT · APIs · Cloud · Microsoft 365</p>
         </div>
       </div>
     </footer>

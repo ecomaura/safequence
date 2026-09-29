@@ -1,121 +1,67 @@
-import { useState } from 'react'
-import { serviceOptions } from '../data/services'
+import Seo from '../lib/Seo'
+import ScanField from '../components/ScanField'
+import ContactForm from '../components/ContactForm'
+import Reveal from '../components/Reveal'
 
-const fieldCls =
-  'w-full bg-[var(--color-bg-2)] border border-[var(--color-line-1)] px-4 py-3 text-sm text-white placeholder:text-[var(--color-ink-3)] focus:border-[var(--color-accent)] transition-colors outline-none'
-
-const labelCls = 'block text-xs text-[var(--color-ink-2)] mb-2'
-
-export default function ContactForm({ defaultService = '' }) {
-  const [submitted, setSubmitted] = useState(false)
-  const [sending, setSending] = useState(false)
-  const [error, setError] = useState('')
-  const [hp, setHp] = useState('')
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: defaultService,
-    url: '',
-    message: '',
-  })
-
-  const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }))
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setSending(true)
-    setError('')
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, hp_field: hp, source: 'contact-form' }),
-      })
-      const json = await res.json().catch(() => ({}))
-      if (!res.ok || !json.ok) throw new Error(json.error || 'Request failed')
-      setSubmitted(true)
-    } catch {
-      setError('Something went wrong sending your request. Please try again or email us directly.')
-    }
-    setSending(false)
-  }
-
-  if (submitted) {
-    return (
-      <div className="border border-[var(--color-line-0)] bg-[var(--color-bg-1)] p-10 text-center">
-        <div className="mono-label mb-3">Request received</div>
-        <p className="text-lg text-white font-[var(--font-display)]">
-          Thanks — a member of our team will be in touch shortly.
-        </p>
-      </div>
-    )
-  }
-
+export default function Contact() {
   return (
-    <form onSubmit={handleSubmit} className="border border-[var(--color-line-0)] bg-[var(--color-bg-1)] p-6 md:p-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div>
-          <label className={labelCls} htmlFor="name">Name</label>
-          <input id="name" required className={fieldCls} value={form.name} onChange={update('name')} placeholder="Jordan Reyes" />
-        </div>
-        <div>
-          <label className={labelCls} htmlFor="email">Work email</label>
-          <input id="email" type="email" required className={fieldCls} value={form.email} onChange={update('email')} placeholder="jordan@company.com" />
-        </div>
-        <div>
-          <label className={labelCls} htmlFor="company">Company</label>
-          <input id="company" required className={fieldCls} value={form.company} onChange={update('company')} placeholder="Company name" />
-        </div>
-        <div>
-          <label className={labelCls} htmlFor="phone">Phone</label>
-          <input id="phone" className={fieldCls} value={form.phone} onChange={update('phone')} placeholder="+1 (___) ___-____" />
-        </div>
-        <div>
-          <label className={labelCls} htmlFor="service">Service required</label>
-          <select id="service" required className={fieldCls} value={form.service} onChange={update('service')}>
-            <option value="" disabled>Select a service</option>
-            {serviceOptions.map((s) => (
-              <option key={s} value={s}>{s}</option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className={labelCls} htmlFor="url">Website / application URL</label>
-          <input id="url" className={fieldCls} value={form.url} onChange={update('url')} placeholder="https://" />
-        </div>
-        <div className="sm:col-span-2">
-          <label className={labelCls} htmlFor="message">Message</label>
-          <textarea id="message" rows={4} className={fieldCls} value={form.message} onChange={update('message')} placeholder="Tell us what you'd like assessed." />
-        </div>
-      </div>
-
-      {/* Honeypot: hidden from people, bots fill it in */}
-      <input
-        type="text"
-        name="hp_field"
-        value={hp}
-        onChange={(e) => setHp(e.target.value)}
-        tabIndex={-1}
-        autoComplete="off"
-        aria-hidden="true"
-        style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+    <>
+      <Seo
+        title="Contact | Safequence"
+        description="Request a security assessment for your applications, networks, APIs, cloud environment or Microsoft 365 tenant."
+        path="/contact"
       />
 
-      {error && <p className="mt-5 text-sm text-red-400">{error}</p>}
+      <section className="relative pt-40 pb-16 md:pt-48 overflow-hidden">
+        <ScanField />
+        <div className="container-sq relative">
+          <Reveal className="max-w-2xl">
+            <div className="mono-label mb-5">Contact</div>
+            <h1 className="font-[var(--font-display)] text-4xl md:text-5xl leading-[1.08] tracking-tight text-white">
+              Let's identify where your security exposure starts.
+            </h1>
+            <p className="mt-6 text-base md:text-lg text-[var(--color-ink-2)] leading-relaxed">
+              Tell us what you're protecting, what you're concerned about, or what needs to be assessed.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
-      <button
-        type="submit"
-        disabled={sending}
-        className="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
-      >
-        {sending ? 'Sending…' : 'Request Security Assessment'}
-      </button>
+      <section className="pb-24 md:pb-32">
+        <div className="container-sq grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-14 items-start">
+          <Reveal>
+            <div className="lg:sticky lg:top-32">
+              <h2 className="font-[var(--font-display)] text-2xl text-white mb-4">Start a conversation</h2>
+              <p className="text-sm text-[var(--color-ink-2)] leading-relaxed max-w-sm">
+                Share a few details about your environment and what you'd like assessed — VAPT, M365,
+                cloud or API security — and a consultant will follow up to scope the engagement.
+              </p>
+              <div className="hidden lg:block mt-10 pt-8 border-t border-[var(--color-line-0)] text-xs text-[var(--color-ink-3)] leading-relaxed max-w-sm">
+                Prefer email? Reach us directly and we'll route your request to the right team.
+                <a
+                  href="mailto:contact@safequence.com"
+                  className="mt-3 block text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-bright)] transition-colors"
+                >
+                  contact@safequence.com
+                </a>
+              </div>
+            </div>
+          </Reveal>
 
-      <p className="mt-5 text-xs text-[var(--color-ink-3)] leading-relaxed">
-        Your information is used only to respond to your security assessment request.
-      </p>
-    </form>
+          <Reveal delay={0.08}>
+            <ContactForm />
+            <div className="lg:hidden mt-8 pt-6 border-t border-[var(--color-line-0)] text-xs text-[var(--color-ink-3)] leading-relaxed">
+              Prefer email? Reach us directly and we'll route your request to the right team.
+              <a
+                href="mailto:contact@safequence.com"
+                className="mt-3 block text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-bright)] transition-colors"
+              >
+                contact@safequence.com
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
   )
 }

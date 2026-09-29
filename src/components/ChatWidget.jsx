@@ -205,7 +205,7 @@ export default function ChatWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? 'Close chat' : 'Open chat'}
         aria-expanded={open}
-        className="flex h-14 w-14 items-center justify-center bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors shadow-xl"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors shadow-xl"
       >
         {open ? (
           <svg width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.6">

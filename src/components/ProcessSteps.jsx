@@ -7,27 +7,29 @@ export default function ProcessSteps({ steps }) {
 
   return (
     <Reveal>
-      <div className="flex flex-row items-stretch border border-[var(--color-line-0)]">
+      <div className="flex flex-col md:flex-row items-stretch border border-[var(--color-line-0)]">
         {steps.map((step, i) => (
           <button
             key={step.name}
             onMouseEnter={() => setActive(i)}
             onFocus={() => setActive(i)}
             onClick={() => setActive(i)}
-            className={`relative flex-1 text-left px-6 py-6 border-b-0 border-r last:border-0 transition-colors duration-200 ${
+            className={`relative min-w-0 md:flex-1 text-left px-5 py-4 md:px-6 md:py-6 border-b md:border-b-0 md:border-r last:border-0 transition-colors duration-200 ${
               i === active ? 'bg-[var(--color-bg-2)]' : 'bg-transparent'
             } border-[var(--color-line-0)]`}
           >
             <span
-              className="absolute top-0 left-0 right-0 h-[2px] md:h-full md:w-[2px] md:left-0 md:right-auto"
+              className="absolute top-0 left-0 bottom-0 w-[2px] md:h-full"
               style={{ background: i === active ? 'var(--color-accent)' : 'transparent' }}
             />
-            <div className="mono-label mb-2">{String(i + 1).padStart(2, '0')}</div>
-            <div
-              className="font-[var(--font-display)] text-base md:text-lg transition-colors"
-              style={{ color: i === active ? '#fff' : 'var(--color-ink-2)' }}
-            >
-              {step.name}
+            <div className="flex items-baseline gap-4 md:block">
+              <div className="mono-label md:mb-2">{String(i + 1).padStart(2, '0')}</div>
+              <div
+                className="font-[var(--font-display)] text-base md:text-lg transition-colors"
+                style={{ color: i === active ? '#fff' : 'var(--color-ink-2)' }}
+              >
+                {step.name}
+              </div>
             </div>
           </button>
         ))}

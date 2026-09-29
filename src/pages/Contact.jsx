@@ -8,7 +8,7 @@ export default function Contact() {
     <>
       <Seo
         title="Contact | Safequence"
-        description="Request a security assessment for your web applications, APIs, cloud environment or Microsoft 365 tenant."
+        description="Request a security assessment for your applications, networks, APIs, cloud environment or Microsoft 365 tenant."
         path="/contact"
       />
 
@@ -33,7 +33,7 @@ export default function Contact() {
             <div className="lg:sticky lg:top-32">
               <h2 className="font-[var(--font-display)] text-2xl text-white mb-4">Start a conversation</h2>
               <p className="text-sm text-[var(--color-ink-2)] leading-relaxed max-w-sm">
-                Share a few details about your environment and what you'd like assessed — Web VAPT, M365,
+                Share a few details about your environment and what you'd like assessed — VAPT, M365,
                 cloud or API security — and a consultant will follow up to scope the engagement.
               </p>
               <div className="mt-10 pt-8 border-t border-[var(--color-line-0)] text-xs text-[var(--color-ink-3)] leading-relaxed max-w-sm">

@@ -2,15 +2,15 @@
 // broader capability catalog. Keep copy here so pages and nav stay in sync.
 
 export const services = [
-  {
-    id: 'web-vapt',
-    path: '/web-vapt',
+   {
+    id: 'vapt',
+    path: '/vapt',
     index: '01',
-    name: 'Web VAPT',
-    fullName: 'Web Application VAPT',
+    name: 'VAPT Services',
+    fullName: 'Vulnerability Assessment & Penetration Testing',
     short:
-      'Find and validate vulnerabilities in websites and web applications before attackers can exploit them.',
-    nav: 'Web VAPT',
+      'Identify and validate vulnerabilities across web, mobile, network and infrastructure environments before attackers can exploit them.',
+    nav: 'VAPT Services',
   },
   {
     id: 'm365-security',

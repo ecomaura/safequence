@@ -8,6 +8,9 @@ const labelCls = 'block text-xs text-[var(--color-ink-2)] mb-2'
 
 export default function ContactForm({ defaultService = '' }) {
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
+  const [hp, setHp] = useState('')
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -20,10 +23,23 @@ export default function ContactForm({ defaultService = '' }) {
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }))
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Wire this up to your lead-intake endpoint or CRM webhook.
-    setSubmitted(true)
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, hp_field: hp, source: 'contact-form' }),
+      })
+      const json = await res.json().catch(() => ({}))
+      if (!res.ok || !json.ok) throw new Error(json.error || 'Request failed')
+      setSubmitted(true)
+    } catch {
+      setError('Something went wrong sending your request. Please try again or email us directly.')
+    }
+    setSending(false)
   }
 
   if (submitted) {
@@ -75,11 +91,26 @@ export default function ContactForm({ defaultService = '' }) {
         </div>
       </div>
 
+      {/* Honeypot: hidden from people, bots fill it in */}
+      <input
+        type="text"
+        name="hp_field"
+        value={hp}
+        onChange={(e) => setHp(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+      />
+
+      {error && <p className="mt-5 text-sm text-red-400">{error}</p>}
+
       <button
         type="submit"
-        className="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors"
+        disabled={sending}
+        className="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
       >
-        Request Security Assessment
+        {sending ? 'Sending…' : 'Request Security Assessment'}
       </button>
 
       <p className="mt-5 text-xs text-[var(--color-ink-3)] leading-relaxed">

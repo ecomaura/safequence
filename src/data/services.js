@@ -91,7 +91,7 @@ export const additionalCapabilities = [
 ]
 
 export const serviceOptions = [
-  'Web VAPT',
+  'VAPT Services',
   'M365 Security',
   'Cloud Security',
   'API Security',

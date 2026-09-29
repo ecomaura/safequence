@@ -39,7 +39,7 @@ export default function Contact() {
               <div className="hidden lg:block mt-10 pt-8 border-t border-[var(--color-line-0)] text-xs text-[var(--color-ink-3)] leading-relaxed max-w-sm">
   Prefer email? Reach us directly and we'll route your request to the right team.
   <a
-    href="contact@safequence.com"
+    href="mailto:contact@safequence.com"
     className="mt-3 block text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-bright)] transition-colors"
   >
     contact@safequence.com
@@ -60,7 +60,6 @@ export default function Contact() {
     </a>
   </div>
 </Reveal>
-          </Reveal>
         </div>
       </section>
     </>

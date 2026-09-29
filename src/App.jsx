@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -26,7 +26,7 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-         <Route path="/vapt" element={<Vapt />} />
+          <Route path="/vapt" element={<Vapt />} />
           <Route path="/web-vapt" element={<Navigate to="/vapt" replace />} />
           <Route path="/m365-security" element={<M365Security />} />
           <Route path="/cloud-security" element={<CloudSecurity />} />

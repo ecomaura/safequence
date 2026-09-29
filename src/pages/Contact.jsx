@@ -36,14 +36,30 @@ export default function Contact() {
                 Share a few details about your environment and what you'd like assessed — VAPT, M365,
                 cloud or API security — and a consultant will follow up to scope the engagement.
               </p>
-              <div className="mt-10 pt-8 border-t border-[var(--color-line-0)] text-xs text-[var(--color-ink-3)] leading-relaxed max-w-sm">
-                Prefer email? Reach us directly and we'll route your request to the right team.
-              </div>
+              <div className="hidden lg:block mt-10 pt-8 border-t border-[var(--color-line-0)] text-xs text-[var(--color-ink-3)] leading-relaxed max-w-sm">
+  Prefer email? Reach us directly and we'll route your request to the right team.
+  <a
+    href="contact@safequence.com"
+    className="mt-3 block text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-bright)] transition-colors"
+  >
+    contact@safequence.com
+  </a>
+</div>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <ContactForm />
+  <ContactForm />
+  <div className="lg:hidden mt-8 pt-6 border-t border-[var(--color-line-0)] text-xs text-[var(--color-ink-3)] leading-relaxed">
+    Prefer email? Reach us directly and we'll route your request to the right team.
+    <a
+      href="mailto:contact@safequence.com"
+      className="mt-3 block text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-bright)] transition-colors"
+    >
+      contact@safequence.com
+    </a>
+  </div>
+</Reveal>
           </Reveal>
         </div>
       </section>

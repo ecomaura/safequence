@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import WebVapt from './pages/WebVapt'
+import Vapt from './pages/Vapt'
 import M365Security from './pages/M365Security'
 import CloudSecurity from './pages/CloudSecurity'
 import ApiSecurity from './pages/ApiSecurity'
@@ -26,7 +26,8 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/web-vapt" element={<WebVapt />} />
+         <Route path="/vapt" element={<Vapt />} />
+          <Route path="/web-vapt" element={<Navigate to="/vapt" replace />} />
           <Route path="/m365-security" element={<M365Security />} />
           <Route path="/cloud-security" element={<CloudSecurity />} />
           <Route path="/api-security" element={<ApiSecurity />} />

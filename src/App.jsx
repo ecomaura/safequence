@@ -8,6 +8,7 @@ import M365Security from './pages/M365Security'
 import CloudSecurity from './pages/CloudSecurity'
 import ApiSecurity from './pages/ApiSecurity'
 import Contact from './pages/Contact'
+import ChatWidget from './components/ChatWidget'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -34,7 +35,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <Footer />
+           <Footer />
+      <ChatWidget />
     </div>
   )
 }

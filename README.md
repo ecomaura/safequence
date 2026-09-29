@@ -24,7 +24,7 @@ npm run preview   # preview the production build
 ```
 src/
   components/   shared UI: Navbar, Footer, hero surfaces, diagrams, forms
-  pages/        Home, WebVapt, M365Security, CloudSecurity, ApiSecurity, Contact
+  pages/        Home, Vapt, M365Security, CloudSecurity, ApiSecurity, Contact
   data/         services.js — single source of truth for service copy,
                 the five-stage methodology, and the wider capability list
   lib/Seo.jsx   lightweight per-page <title>/meta/canonical manager
@@ -40,7 +40,7 @@ it in everywhere at once — no other code changes needed.
 ## Content
 
 Service copy, the methodology stages, and the "additional capabilities" list
-live in `src/data/services.js`. Only Web VAPT, M365 Security, Cloud Security
+live in `src/data/services.js`. Only VAPT Services, M365 Security, Cloud Security
 and API Security have dedicated routes, per the brief; the other 12 services
 from the wider catalog surface as a supporting list on the homepage.
 

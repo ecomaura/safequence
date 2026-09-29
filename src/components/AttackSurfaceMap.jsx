@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 
 const nodes = [
-  { x: 20, y: 18, label: '/auth' },
-  { x: 62, y: 14, label: '/api/users' },
-  { x: 84, y: 34, label: '/checkout' },
-  { x: 12, y: 50, label: '/admin' },
-  { x: 46, y: 46, label: '/session' },
-  { x: 70, y: 62, label: '/upload' },
-  { x: 30, y: 78, label: '/reset-pwd' },
-  { x: 90, y: 82, label: '/webhook' },
+  { x: 20, y: 18, label: 'web-app' },
+  { x: 62, y: 14, label: 'api-gateway' },
+  { x: 84, y: 34, label: 'mobile-app' },
+  { x: 12, y: 50, label: 'vpn' },
+  { x: 46, y: 46, label: 'auth-server' },
+  { x: 70, y: 62, label: 'cloud-storage' },
+  { x: 30, y: 78, label: 'internal-net' },
+  { x: 90, y: 82, label: 'db-server' },
 ]
 
 const flagged = new Set([0, 4, 6])

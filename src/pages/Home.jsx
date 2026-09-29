@@ -33,7 +33,7 @@ export default function Home() {
     <>
       <Seo
         title="Safequence | Cybersecurity Testing & Security Assessment"
-        description="Security testing and assessment for web applications, APIs, cloud environments and Microsoft 365."
+        description="Security testing and assessment for applications, networks, APIs, cloud environments and Microsoft 365."
         path="/"
       />
 
@@ -52,7 +52,7 @@ export default function Home() {
               Find the weaknesses<br />before attackers do.
             </h1>
             <p className="mt-7 text-base md:text-lg text-[var(--color-ink-2)] leading-relaxed max-w-xl">
-              Security testing and assessment for web applications, APIs, cloud environments
+              Security testing and assessment for applications, networks, APIs, cloud environments
               and Microsoft 365.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">

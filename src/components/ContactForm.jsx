@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { trackLead } from '../lib/track'
+  import { useState } from 'react'
 import { serviceOptions } from '../data/services'
 
 const fieldCls =
@@ -35,6 +36,7 @@ export default function ContactForm({ defaultService = '' }) {
       })
       const json = await res.json().catch(() => ({}))
       if (!res.ok || !json.ok) throw new Error(json.error || 'Request failed')
+       trackLead('contact_form')
       setSubmitted(true)
     } catch {
       setError('Something went wrong sending your request. Please try again or email us directly.')

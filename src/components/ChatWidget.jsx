@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from 'react'
+import { trackLead } from '../lib/track'
+  import { useState, useRef, useEffect } from 'react'
 import { serviceOptions } from '../data/services'
 
 const FALLBACK_EMAIL = 'contact@safequence.com'
@@ -76,6 +77,7 @@ export default function ChatWidget() {
       })
       const json = await res.json().catch(() => ({}))
       if (!res.ok || !json.ok) throw new Error()
+      trackLead('chatbot')
       bot("Thanks! Your inquiry has been sent. A member of our team will reply to your email shortly.")
       setDone(true)
     } catch {

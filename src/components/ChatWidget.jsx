@@ -1,6 +1,6 @@
-import { trackLead } from '../lib/track'
-  import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { serviceOptions } from '../data/services'
+import { trackLead } from '../lib/track'
 
 const FALLBACK_EMAIL = 'contact@safequence.com'
 
@@ -16,6 +16,18 @@ const steps = [
     ask: (d) => `Nice to meet you, ${d.name}. What's your work email?`,
     validate: (v) => /^\S+@\S+\.\S+$/.test(v),
     error: "That doesn't look like a valid email. Try again?",
+  },
+  {
+    key: 'phone',
+    ask: () => "What's the best mobile number to reach you on? Please include the country code.",
+    optional: true,
+    options: ['Skip'],
+    placeholder: 'e.g. +1 555 123 4567',
+    validate: (v) => {
+      const digits = v.replace(/\D/g, '')
+      return /^[+()\-.\s\d]+$/.test(v) && digits.length >= 7 && digits.length <= 15
+    },
+    error: 'That number looks off. Please include the country code (e.g. +1 555 123 4567), or tap Skip.',
   },
   {
     key: 'company',
@@ -93,11 +105,12 @@ export default function ChatWidget() {
     const s = steps[step]
     setMsgs((m) => [...m, { from: 'user', text: v }])
     setInput('')
-    if (s.validate && !s.validate(v)) {
+    const skipped = s.optional && v.toLowerCase() === 'skip'
+    if (!skipped && s.validate && !s.validate(v)) {
       setTimeout(() => bot(s.error), 250)
       return
     }
-    const d = { ...data, [s.key]: v }
+    const d = { ...data, [s.key]: skipped ? '' : v }
     setData(d)
     if (step === steps.length - 1) {
       submit(d)
@@ -187,7 +200,7 @@ export default function ChatWidget() {
                 onChange={(e) => setInput(e.target.value)}
                 disabled={busy || failed}
                 maxLength={2000}
-                placeholder={cur.options ? 'Pick an option above or type…' : 'Type your answer…'}
+                placeholder={cur.placeholder || (cur.options ? 'Pick an option above or type…' : 'Type your answer…')}
                 aria-label="Your answer"
                 className="flex-1 min-w-0 bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-[var(--color-ink-3)]"
               />

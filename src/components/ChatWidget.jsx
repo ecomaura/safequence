@@ -179,7 +179,7 @@ export default function ChatWidget() {
             {failed && (
               <button
                 onClick={() => submit(data)}
-                className="px-3 py-1.5 text-xs bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors"
+                className="px-3 py-1.5 text-xs bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-dim)] transition-colors"
               >
                 Try again
               </button>
@@ -207,7 +207,7 @@ export default function ChatWidget() {
               <button
                 type="submit"
                 disabled={busy || failed}
-                className="px-4 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
+                className="px-4 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-dim)] transition-colors disabled:opacity-60"
               >
                 Send
               </button>
@@ -220,7 +220,7 @@ export default function ChatWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? 'Close chat' : 'Open chat'}
         aria-expanded={open}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors shadow-xl"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-dim)] transition-colors shadow-xl"
       >
         {open ? (
           <svg width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.6">

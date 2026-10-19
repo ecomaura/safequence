@@ -9,50 +9,33 @@
 
 
 
-/* ---- Colour tokens: light by default -------------------------------- */
-:root,
-.theme-light {
-  --color-bg-0: #ffffff;
-  --color-bg-1: #f3f6f9;
-  --color-bg-2: #eaf0f5;
-  --color-bg-3: #e1e9f0;
-  --color-ink-0: #0b1b2b;
-  --color-ink-1: #334155;
-  --color-ink-2: #475569;
-  --color-ink-3: #64748b;
-  --color-line-0: #dde5ee;
-  --color-line-1: #c5d1de;
-  --color-accent: #0b6b85;
-  --color-accent-dim: #0a566c;
-  --color-accent-bright: #0d7f9e;
+/* ---- Colour tokens ---------------------------------------------------
+   Palette balance:  ~75% near-black / navy   (--color-bg-*)
+                     ~18% steel blue          (--color-ink-2/3, --color-steel, lines)
+                      ~5% electric blue       (--color-accent: buttons, hovers, icons)
+                      ~2% cyan                (--color-cyan: small highlights only)  */
+:root {
+  --color-bg-0: #060b14;
+  --color-bg-1: #0a1322;
+  --color-bg-2: #0f1b30;
+  --color-bg-3: #15253f;
+
+  --color-ink-0: #f4f7fb;
+  --color-ink-1: #c5d1e0;
+  --color-ink-2: #8ea4bf;
+  --color-ink-3: #6f88a5;
+
+  --color-steel: #4f6f94;
+  --color-line-0: #16243a;
+  --color-line-1: #27405f;
+
+  --color-accent: #2f6bff;
+  --color-accent-dim: #1f4fd1;
+  --color-accent-bright: #5a8dff;
+  --color-accent-text: #6f9bff;
   --color-on-accent: #ffffff;
-  --color-warn: #b45309;
-}
 
-.theme-light {
-  background: var(--color-bg-0);
-  color: var(--color-ink-0);
-}
-
-/* ---- Dark band: add class "theme-dark" to any section --------------- */
-.theme-dark {
-  --color-bg-0: #0a2230;
-  --color-bg-1: #0d2a3a;
-  --color-bg-2: #11334a;
-  --color-bg-3: #153c54;
-  --color-ink-0: #ffffff;
-  --color-ink-1: #cfdbe4;
-  --color-ink-2: #a9bccb;
-  --color-ink-3: #8fa5b6;
-  --color-line-0: #1b3b4f;
-  --color-line-1: #26506a;
-  --color-accent: #5fd0e0;
-  --color-accent-dim: #2f93a6;
-  --color-accent-bright: #8fe3ee;
-  --color-on-accent: #07202c;
-  --color-warn: #f5a524;
-  background: var(--color-bg-0);
-  color: var(--color-ink-0);
+  --color-cyan: #22d3ee;
 }
 
 * {
@@ -114,7 +97,7 @@ body {
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-accent);
+  color: var(--color-cyan);
 }
 
 .hairline {

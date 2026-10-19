@@ -40,7 +40,7 @@ export default function Contact() {
   Prefer email? Reach us directly and we'll route your request to the right team.
   <a
     href="mailto:contact@evidecode.com"
-    className="mt-3 block text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-bright)] transition-colors"
+    className="mt-3 block text-sm text-[var(--color-accent-text)] hover:text-[var(--color-accent-bright)] transition-colors"
   >
     contact@evidecode.com
   </a>
@@ -54,7 +54,7 @@ export default function Contact() {
     Prefer email? Reach us directly and we'll route your request to the right team.
     <a
       href="mailto:contact@evidecode.com"
-      className="mt-3 block text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-bright)] transition-colors"
+      className="mt-3 block text-sm text-[var(--color-accent-text)] hover:text-[var(--color-accent-bright)] transition-colors"
     >
       contact@evidecode.com
     </a>

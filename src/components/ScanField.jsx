@@ -17,13 +17,13 @@ export default function ScanField({ className = '' }) {
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(95,208,224,0.10), transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(34,211,238,0.07), transparent 70%)',
         }}
       />
 
       <motion.div
         className="absolute left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, var(--color-accent), transparent)' }}
+        style={{ background: 'linear-gradient(90deg, transparent, var(--color-cyan), transparent)' }}
         initial={{ top: '0%', opacity: 0 }}
         animate={{ top: ['0%', '100%'], opacity: [0, 0.6, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
@@ -36,7 +36,7 @@ export default function ScanField({ className = '' }) {
             cx={`${p.x}%`}
             cy={`${p.y}%`}
             r="1.6"
-            fill="var(--color-accent)"
+            fill="var(--color-cyan)"
             initial={{ opacity: 0.15 }}
             animate={{ opacity: [0.15, 0.55, 0.15] }}
             transition={{ duration: 3 + (i % 3), repeat: Infinity, delay: i * 0.4, ease: 'easeInOut' }}

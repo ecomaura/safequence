@@ -58,7 +58,7 @@ export default function AttackSurfaceMap() {
               x={n.x}
               y={n.y - 4}
               fontSize="3"
-              fill={flagged.has(i) ? 'var(--color-accent)' : 'var(--color-ink-2)'}
+              fill={flagged.has(i) ? 'var(--color-cyan)' : 'var(--color-ink-2)'}
               fontFamily="IBM Plex Mono, monospace"
               textAnchor="middle"
             >
@@ -70,7 +70,7 @@ export default function AttackSurfaceMap() {
 
       <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between mono-label !text-[10px]">
         <span>SURFACE MAP</span>
-        <span className="text-[var(--color-accent)]">3 FLAGGED FOR REVIEW</span>
+        <span className="text-[var(--color-accent-text)]">3 FLAGGED FOR REVIEW</span>
       </div>
     </div>
   )

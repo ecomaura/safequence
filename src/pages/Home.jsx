@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 import Seo from '../lib/Seo'
-import ScanField from '../components/ScanField'
-import FindingCard from '../components/FindingCard'
 import Button from '../components/Button'
 import ServiceCard from '../components/ServiceCard'
 import SectionHeading from '../components/SectionHeading'
@@ -39,23 +37,38 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="theme-dark relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
-        <ScanField />
-        <div className="container-sq relative grid grid-cols-1 lg:grid-cols-[1.2fr_0.9fr] gap-14 lg:gap-14 items-center">
+      <section className="relative overflow-hidden pt-36 pb-24 md:pt-48 md:pb-36 min-h-[620px] md:min-h-[720px] flex items-center">
+        <img
+          src="/hero.jpg"
+          alt=""
+          fetchpriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-[72%_center]"
+        />
+        {/* keep the text side readable; let the monitors show on the right */}
+        <div
+          className="absolute inset-0"
+          aria-hidden="true"
+          style={{
+            background:
+              'linear-gradient(90deg, var(--color-bg-0) 0%, rgba(6,11,20,0.93) 36%, rgba(6,11,20,0.55) 62%, rgba(6,11,20,0.2) 100%), linear-gradient(0deg, var(--color-bg-0) 0%, transparent 28%)',
+          }}
+        />
+        <div className="container-sq relative w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-3xl"
           >
             <div className="eyebrow mb-5">Cybersecurity testing &amp; security assessment</div>
-            <h1 className="font-display font-bold text-[2.6rem] leading-[1.02] sm:text-6xl md:text-[3.5rem] tracking-[-0.025em] text-balance text-[var(--color-ink-0)]">
+            <h1 className="font-display font-bold text-[2.6rem] leading-[1.03] sm:text-6xl md:text-[4.1rem] tracking-[-0.025em] text-[var(--color-ink-0)] text-balance">
               Find the weaknesses<br className="hidden md:block" /> before attackers do.
             </h1>
-            <p className="mt-6 text-base md:text-lg text-[var(--color-ink-2)] leading-relaxed max-w-[34rem]">
+            <p className="mt-6 text-base md:text-lg text-[var(--color-ink-1)] leading-relaxed max-w-xl">
               Security testing and assessment for applications, networks, APIs, cloud environments
-              and Microsoft 365. Every finding comes with the evidence to prove it and the steps to fix it.
+              and Microsoft 365.
             </p>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               <Button to="/contact" variant="primary">Request a Security Assessment</Button>
               <Button to="/#services" variant="ghost" onClick={(e) => {
                 e.preventDefault()
@@ -63,8 +76,6 @@ export default function Home() {
               }}>Explore Services</Button>
             </div>
           </motion.div>
-
-          <FindingCard />
         </div>
       </section>
 
@@ -132,7 +143,7 @@ export default function Home() {
               {additionalCapabilities.map((c) => (
                 <li
                   key={c}
-                  className="px-4 py-2 text-sm text-[var(--color-ink-1)] border border-[var(--color-line-1)] bg-[var(--color-bg-0)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+                  className="px-4 py-2 text-sm text-[var(--color-ink-1)] border border-[var(--color-line-1)] bg-[var(--color-bg-1)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent-text)] transition-colors"
                 >
                   {c}
                 </li>

@@ -110,7 +110,7 @@ export default function ContactForm({ defaultService = '' }) {
       <button
         type="submit"
         disabled={sending}
-        className="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
+        className="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-dim)] transition-colors disabled:opacity-60"
       >
         {sending ? 'Sending…' : 'Request Security Assessment'}
       </button>

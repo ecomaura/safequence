@@ -70,7 +70,7 @@ export default function Navbar() {
                         className="group flex flex-col gap-1 p-4 hover:bg-[var(--color-bg-2)] transition-colors"
                       >
                         <span className="mono-label text-[var(--color-ink-3)]">{s.index}</span>
-                        <span className="text-sm text-[var(--color-ink-0)] group-hover:text-[var(--color-accent)] transition-colors">
+                        <span className="text-sm text-[var(--color-ink-0)] group-hover:text-[var(--color-accent-text)] transition-colors">
                           {s.name}
                         </span>
                         <span className="text-xs text-[var(--color-ink-2)] leading-snug">{s.short}</span>
@@ -96,7 +96,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className="inline-flex items-center px-4 py-2.5 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors"
+            className="inline-flex items-center px-4 py-2.5 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-dim)] transition-colors"
           >
             Request Security Assessment
           </Link>

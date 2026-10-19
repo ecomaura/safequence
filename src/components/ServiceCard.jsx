@@ -30,9 +30,9 @@ export default function ServiceCard({ service, delay = 0 }) {
     <Reveal delay={delay} className="h-full">
       <Link
         to={service.path}
-        className="group flex flex-col h-full bg-[var(--color-bg-0)] border border-[var(--color-line-0)] p-7 transition-colors hover:border-[var(--color-accent)]"
+        className="group flex flex-col h-full bg-[var(--color-bg-2)] border border-[var(--color-line-0)] p-7 transition-colors hover:border-[var(--color-accent)]"
       >
-        <span className="flex h-11 w-11 items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+        <span className="flex h-11 w-11 items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent-text)]">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             {icons[service.id]}
           </svg>
@@ -45,7 +45,7 @@ export default function ServiceCard({ service, delay = 0 }) {
           {service.short}
         </p>
 
-        <span className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent)]">
+        <span className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-accent-text)]">
           View service
           <svg width="14" height="14" viewBox="0 0 16 16" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
             <path d="M2 8h11M9 3.5L13.5 8 9 12.5" stroke="currentColor" strokeWidth="1.5" fill="none" />

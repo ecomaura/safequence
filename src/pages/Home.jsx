@@ -38,7 +38,7 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
+      <section className="theme-dark relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
         <ScanField />
         <div className="container-sq relative">
           <motion.div
@@ -48,7 +48,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <div className="mono-label mb-6">Cybersecurity testing &amp; security assessment</div>
-            <h1 className="font-[var(--font-display)] text-[2.6rem] leading-[1.05] sm:text-6xl md:text-[4.2rem] tracking-tight text-white">
+            <h1 className="font-[var(--font-display)] text-[2.6rem] leading-[1.05] sm:text-6xl md:text-[4.2rem] tracking-tight text-[var(--color-ink-0)]">
               Find the weaknesses<br />before attackers do.
             </h1>
             <p className="mt-7 text-base md:text-lg text-[var(--color-ink-2)] leading-relaxed max-w-xl">
@@ -98,7 +98,7 @@ export default function Home() {
               {differentiators.map((d, i) => (
                 <Reveal key={d.label} delay={i * 0.07}>
                   <div className="border-t border-[var(--color-line-0)] py-6">
-                    <h3 className="text-white text-base font-medium">{d.label}</h3>
+                    <h3 className="text-[var(--color-ink-0)] text-base font-medium">{d.label}</h3>
                     <p className="mt-2 text-sm text-[var(--color-ink-2)] leading-relaxed">{d.detail}</p>
                   </div>
                 </Reveal>
@@ -138,7 +138,7 @@ export default function Home() {
                 >
                   <span className="mono-label">{s.index}</span>
                   <div>
-                    <h3 className="font-[var(--font-display)] text-xl text-white group-hover:text-[var(--color-accent)] transition-colors">
+                    <h3 className="font-[var(--font-display)] text-xl text-[var(--color-ink-0)] group-hover:text-[var(--color-accent)] transition-colors">
                       {s.name}
                     </h3>
                     <p className="mt-2 text-sm text-[var(--color-ink-2)] leading-relaxed max-w-2xl">{s.short}</p>

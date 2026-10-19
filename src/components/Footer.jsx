@@ -19,7 +19,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-3">
             {services.map((s) => (
               <li key={s.id}>
-                <Link to={s.path} className="text-sm text-[var(--color-ink-1)] hover:text-white transition-colors">
+                <Link to={s.path} className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">
                   {s.name}
                 </Link>
               </li>
@@ -30,9 +30,9 @@ export default function Footer() {
         <div>
           <div className="mono-label mb-4">Company</div>
           <ul className="flex flex-col gap-3">
-            <li><a href="/#why" className="text-sm text-[var(--color-ink-1)] hover:text-white transition-colors">Why EviDecode</a></li>
-            <li><a href="/#approach" className="text-sm text-[var(--color-ink-1)] hover:text-white transition-colors">Security Approach</a></li>
-            <li><Link to="/contact" className="text-sm text-[var(--color-ink-1)] hover:text-white transition-colors">Contact</Link></li>
+            <li><a href="/#why" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Why EviDecode</a></li>
+            <li><a href="/#approach" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Security Approach</a></li>
+            <li><Link to="/contact" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Contact</Link></li>
           </ul>
         </div>
 

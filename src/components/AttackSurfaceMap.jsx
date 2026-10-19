@@ -28,7 +28,7 @@ export default function AttackSurfaceMap() {
             y1={nodes[a].y}
             x2={nodes[b].x}
             y2={nodes[b].y}
-            stroke="#1c1c1c"
+            stroke="var(--color-line-1)"
             strokeWidth="0.4"
           />
         ))}
@@ -52,13 +52,13 @@ export default function AttackSurfaceMap() {
               cx={n.x}
               cy={n.y}
               r="1.5"
-              fill={flagged.has(i) ? 'var(--color-accent)' : '#4b4b4f'}
+              fill={flagged.has(i) ? 'var(--color-accent)' : 'var(--color-ink-3)'}
             />
             <text
               x={n.x}
               y={n.y - 4}
               fontSize="3"
-              fill={flagged.has(i) ? '#c6f3f7' : '#6b6b70'}
+              fill={flagged.has(i) ? 'var(--color-accent)' : 'var(--color-ink-2)'}
               fontFamily="IBM Plex Mono, monospace"
               textAnchor="middle"
             >

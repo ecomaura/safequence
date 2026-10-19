@@ -137,7 +137,7 @@ export default function ChatWidget() {
             <button
               onClick={() => setOpen(false)}
               aria-label="Close chat"
-              className="text-[var(--color-ink-2)] hover:text-white transition-colors"
+              className="text-[var(--color-ink-2)] hover:text-[var(--color-ink-0)] transition-colors"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M2 2l10 10M12 2L2 12" />
@@ -151,7 +151,7 @@ export default function ChatWidget() {
                 <span
                   className={`inline-block px-3 py-2 max-w-[85%] text-left break-words ${
                     m.from === 'user'
-                      ? 'bg-[var(--color-accent)] text-[#050505]'
+                      ? 'bg-[var(--color-accent)] text-[var(--color-on-accent)]'
                       : 'bg-[var(--color-bg-3)] text-[var(--color-ink-1)]'
                   }`}
                 >
@@ -179,7 +179,7 @@ export default function ChatWidget() {
             {failed && (
               <button
                 onClick={() => submit(data)}
-                className="px-3 py-1.5 text-xs bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors"
+                className="px-3 py-1.5 text-xs bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors"
               >
                 Try again
               </button>
@@ -202,12 +202,12 @@ export default function ChatWidget() {
                 maxLength={2000}
                 placeholder={cur.placeholder || (cur.options ? 'Pick an option above or type…' : 'Type your answer…')}
                 aria-label="Your answer"
-                className="flex-1 min-w-0 bg-transparent px-4 py-3 text-sm text-white outline-none placeholder:text-[var(--color-ink-3)]"
+                className="flex-1 min-w-0 bg-transparent px-4 py-3 text-sm text-[var(--color-ink-0)] outline-none placeholder:text-[var(--color-ink-3)]"
               />
               <button
                 type="submit"
                 disabled={busy || failed}
-                className="px-4 text-sm font-medium bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
+                className="px-4 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
               >
                 Send
               </button>
@@ -220,7 +220,7 @@ export default function ChatWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label={open ? 'Close chat' : 'Open chat'}
         aria-expanded={open}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors shadow-xl"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors shadow-xl"
       >
         {open ? (
           <svg width="18" height="18" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.6">

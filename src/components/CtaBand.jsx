@@ -3,10 +3,10 @@ import Button from './Button'
 
 export default function CtaBand({ title, cta }) {
   return (
-    <section className="border-t border-[var(--color-line-0)]">
+    <section className="theme-dark border-t border-[var(--color-line-0)]">
       <div className="container-sq py-20 md:py-28 text-center">
         <Reveal className="mx-auto max-w-2xl">
-          <h2 className="font-[var(--font-display)] text-2xl md:text-[2.2rem] leading-tight tracking-tight text-white">
+          <h2 className="font-[var(--font-display)] text-2xl md:text-[2.2rem] leading-tight tracking-tight text-[var(--color-ink-0)]">
             {title}
           </h2>
           <div className="mt-8">

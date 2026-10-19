@@ -15,7 +15,7 @@ export default function PointGrid({ eyebrow, title, description, items, columns 
           {items.map((item, i) => (
             <Reveal key={item.label} delay={(i % columns) * 0.06}>
               <div className="border-t border-[var(--color-line-0)] py-6">
-                <h3 className="text-white text-base font-medium">{item.label}</h3>
+                <h3 className="text-[var(--color-ink-0)] text-base font-medium">{item.label}</h3>
                 {item.detail && (
                   <p className="mt-2 text-sm text-[var(--color-ink-2)] leading-relaxed">{item.detail}</p>
                 )}

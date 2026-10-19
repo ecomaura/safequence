@@ -3,7 +3,7 @@ import { trackLead } from '../lib/track'
 import { serviceOptions } from '../data/services'
 
 const fieldCls =
-  'w-full bg-[var(--color-bg-2)] border border-[var(--color-line-1)] px-4 py-3 text-sm text-white placeholder:text-[var(--color-ink-3)] focus:border-[var(--color-accent)] transition-colors outline-none'
+  'w-full bg-[var(--color-bg-2)] border border-[var(--color-line-1)] px-4 py-3 text-sm text-[var(--color-ink-0)] placeholder:text-[var(--color-ink-3)] focus:border-[var(--color-accent)] transition-colors outline-none'
 
 const labelCls = 'block text-xs text-[var(--color-ink-2)] mb-2'
 
@@ -48,7 +48,7 @@ export default function ContactForm({ defaultService = '' }) {
     return (
       <div className="border border-[var(--color-line-0)] bg-[var(--color-bg-1)] p-10 text-center">
         <div className="mono-label mb-3">Request received</div>
-        <p className="text-lg text-white font-[var(--font-display)]">
+        <p className="text-lg text-[var(--color-ink-0)] font-[var(--font-display)]">
           Thanks — a member of our team will be in touch shortly.
         </p>
       </div>
@@ -110,7 +110,7 @@ export default function ContactForm({ defaultService = '' }) {
       <button
         type="submit"
         disabled={sending}
-        className="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
+        className="mt-7 w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors disabled:opacity-60"
       >
         {sending ? 'Sending…' : 'Request Security Assessment'}
       </button>

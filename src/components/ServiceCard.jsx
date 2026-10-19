@@ -23,7 +23,7 @@ export default function ServiceCard({ service, delay = 0 }) {
         </div>
 
         <div className="mt-10">
-          <h3 className="font-[var(--font-display)] text-xl text-white group-hover:text-[var(--color-accent)] transition-colors">
+          <h3 className="font-[var(--font-display)] text-xl text-[var(--color-ink-0)] group-hover:text-[var(--color-accent)] transition-colors">
             {service.name}
           </h3>
           <p className="mt-3 text-sm text-[var(--color-ink-2)] leading-relaxed max-w-[34ch]">

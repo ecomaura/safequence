@@ -11,18 +11,10 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const closeTimer = useRef(null)
   const location = useLocation()
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
 
   useEffect(() => {
     setMobileOpen(false)
@@ -39,11 +31,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#050505]/92 backdrop-blur border-[var(--color-line-0)]'
-          : 'bg-transparent border-transparent'
-      }`}
+      className="fixed top-0 inset-x-0 z-50 border-b transition-all duration-300 bg-[var(--color-bg-0)] border-[var(--color-line-0)]"
     >
       <nav className="container-sq flex items-center justify-between h-16 md:h-[68px]">
         <Logo />
@@ -55,7 +43,7 @@ export default function Navbar() {
             onMouseLeave={scheduleClose}
           >
             <button
-              className="flex items-center gap-1.5 text-sm text-[var(--color-ink-1)] hover:text-white transition-colors py-2"
+              className="flex items-center gap-1.5 text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors py-2"
               aria-expanded={servicesOpen}
               onClick={() => setServicesOpen((v) => !v)}
             >
@@ -82,7 +70,7 @@ export default function Navbar() {
                         className="group flex flex-col gap-1 p-4 hover:bg-[var(--color-bg-2)] transition-colors"
                       >
                         <span className="mono-label text-[var(--color-ink-3)]">{s.index}</span>
-                        <span className="text-sm text-white group-hover:text-[var(--color-accent)] transition-colors">
+                        <span className="text-sm text-[var(--color-ink-0)] group-hover:text-[var(--color-accent)] transition-colors">
                           {s.name}
                         </span>
                         <span className="text-xs text-[var(--color-ink-2)] leading-snug">{s.short}</span>
@@ -98,7 +86,7 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.to}
-              className="text-sm text-[var(--color-ink-1)] hover:text-white transition-colors"
+              className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors"
             >
               {l.label}
             </a>
@@ -108,7 +96,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className="inline-flex items-center px-4 py-2.5 text-sm font-medium bg-[var(--color-accent)] text-[#050505] hover:bg-[var(--color-accent-bright)] transition-colors"
+            className="inline-flex items-center px-4 py-2.5 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)] hover:bg-[var(--color-accent-bright)] transition-colors"
           >
             Request Security Assessment
           </Link>
@@ -120,9 +108,9 @@ export default function Navbar() {
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
         >
-          <span className={`block w-5 h-px bg-white transition-transform ${mobileOpen ? 'translate-y-[6px] rotate-45' : ''}`} />
-          <span className={`block w-5 h-px bg-white transition-opacity ${mobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-5 h-px bg-white transition-transform ${mobileOpen ? '-translate-y-[6px] -rotate-45' : ''}`} />
+          <span className={`block w-5 h-px bg-[var(--color-ink-0)] transition-transform ${mobileOpen ? 'translate-y-[6px] rotate-45' : ''}`} />
+          <span className={`block w-5 h-px bg-[var(--color-ink-0)] transition-opacity ${mobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-5 h-px bg-[var(--color-ink-0)] transition-transform ${mobileOpen ? '-translate-y-[6px] -rotate-45' : ''}`} />
         </button>
       </nav>
 
@@ -140,7 +128,7 @@ export default function Navbar() {
                 <div className="mono-label mb-3">Services</div>
                 <div className="flex flex-col gap-3">
                   {services.map((s) => (
-                    <Link key={s.id} to={s.path} className="text-base text-white flex items-center gap-3">
+                    <Link key={s.id} to={s.path} className="text-base text-[var(--color-ink-0)] flex items-center gap-3">
                       <span className="mono-label">{s.index}</span>
                       {s.name}
                     </Link>
@@ -149,14 +137,14 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col gap-3 pt-4 border-t border-[var(--color-line-0)]">
                 {navLinks.map((l) => (
-                  <a key={l.label} href={l.to} className="text-base text-white">
+                  <a key={l.label} href={l.to} className="text-base text-[var(--color-ink-0)]">
                     {l.label}
                   </a>
                 ))}
               </div>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-4 py-3 text-sm font-medium bg-[var(--color-accent)] text-[#050505]"
+                className="inline-flex items-center justify-center px-4 py-3 text-sm font-medium bg-[var(--color-accent)] text-[var(--color-on-accent)]"
               >
                 Request Security Assessment
               </Link>

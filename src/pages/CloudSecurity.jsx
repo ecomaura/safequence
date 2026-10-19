@@ -66,7 +66,7 @@ export default function CloudSecurity() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-[var(--color-line-0)]">
             {scopeAreas.map((item) => (
               <div key={item} className="border-t border-[var(--color-line-0)] py-6 -mt-px pr-4">
-                <p className="text-sm text-white">{item}</p>
+                <p className="text-sm text-[var(--color-ink-0)]">{item}</p>
               </div>
             ))}
           </div>

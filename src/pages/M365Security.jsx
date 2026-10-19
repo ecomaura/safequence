@@ -46,7 +46,7 @@ export default function M365Security() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-0 border-t border-[var(--color-line-0)]">
             {['Entra ID review', 'MFA & Conditional Access', 'Defender configuration', 'Exchange / email security', 'Admin & app permissions'].map((item) => (
               <div key={item} className="border-t border-[var(--color-line-0)] py-6 -mt-px">
-                <p className="text-sm text-white">{item}</p>
+                <p className="text-sm text-[var(--color-ink-0)]">{item}</p>
               </div>
             ))}
           </div>

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 
 /**
- * Renders the EviDecode wordmark from /public/logo.svg.
+ * Renders the EviDecode wordmark from /public/logo.svg (dark ink, for light backgrounds;
+ * /public/logo-light.svg is the white version for dark backgrounds).
  *
  * NOTE: No logo asset was supplied with this build, so /public/logo.svg
  * is a placeholder mark. Drop the real "download (1).svg" asset into

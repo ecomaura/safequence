@@ -5,7 +5,30 @@
   --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
 
+
+
+/* ---- Colour tokens: light by default -------------------------------- */
+:root {
+  --color-bg-0: #ffffff;
+  --color-bg-1: #f6f8fa;
+  --color-bg-2: #f0f3f6;
+  --color-bg-3: #e8ecf1;
+  --color-ink-0: #0b1b2b;
+  --color-ink-1: #334155;
+  --color-ink-2: #475569;
+  --color-ink-3: #64748b;
+  --color-line-0: #e2e8f0;
+  --color-line-1: #cbd5e1;
+  --color-accent: #0b6b85;
+  --color-accent-dim: #0a566c;
+  --color-accent-bright: #0d7f9e;
+  --color-on-accent: #ffffff;
+}
+
+/* ---- Dark band: add class "theme-dark" to any section --------------- */
+.theme-dark {
   --color-bg-0: #050505;
   --color-bg-1: #080808;
   --color-bg-2: #0d0d0d;
@@ -13,12 +36,15 @@
   --color-ink-0: #ffffff;
   --color-ink-1: #c7c9cd;
   --color-ink-2: #a1a1aa;
-  --color-ink-3: #6b6b70;
+  --color-ink-3: #8a8a92;
   --color-line-0: #1c1c1c;
   --color-line-1: #262626;
   --color-accent: #35c9db;
   --color-accent-dim: #1c7d8a;
   --color-accent-bright: #6fe3ef;
+  --color-on-accent: #050505;
+  background: var(--color-bg-0);
+  color: var(--color-ink-0);
 }
 
 * {
@@ -41,12 +67,14 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: #050505;
+  color: var(--color-on-accent);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 :focus-visible {

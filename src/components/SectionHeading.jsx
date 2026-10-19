@@ -4,7 +4,7 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
   return (
     <Reveal className={align === 'center' ? 'text-center mx-auto max-w-2xl' : 'max-w-2xl'}>
       {eyebrow && <div className="mono-label mb-4">{eyebrow}</div>}
-      <h2 className="font-[var(--font-display)] text-3xl md:text-[2.6rem] leading-[1.1] tracking-tight text-white">
+      <h2 className="font-[var(--font-display)] text-3xl md:text-[2.6rem] leading-[1.1] tracking-tight text-[var(--color-ink-0)]">
         {title}
       </h2>
       {description && (

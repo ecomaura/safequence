@@ -17,7 +17,7 @@ export default function ScanField({ className = '' }) {
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(53,201,219,0.06), transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(95,208,224,0.10), transparent 70%)',
         }}
       />
 

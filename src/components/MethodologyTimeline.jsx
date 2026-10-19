@@ -31,7 +31,7 @@ export default function MethodologyTimeline() {
                 <div>
                   <div className="mono-label mb-1">{stage.index}</div>
                   <div
-                    className="font-[var(--font-display)] text-lg transition-colors duration-200"
+                    className="font-display font-semibold text-lg transition-colors duration-200"
                     style={{ color: i === active ? 'var(--color-ink-0)' : 'var(--color-ink-2)' }}
                   >
                     {stage.name}
@@ -68,7 +68,7 @@ export default function MethodologyTimeline() {
               </div>
               <div className="pb-2">
                 <div className="mono-label mb-1">{stage.index}</div>
-                <div className="font-[var(--font-display)] text-lg text-[var(--color-ink-0)]">{stage.name}</div>
+                <div className="font-display font-semibold text-lg text-[var(--color-ink-0)]">{stage.name}</div>
                 <p className="mt-2 text-sm text-[var(--color-ink-2)] leading-relaxed">{stage.detail}</p>
               </div>
             </div>

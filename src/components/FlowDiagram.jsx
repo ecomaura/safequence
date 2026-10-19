@@ -12,7 +12,7 @@ export default function FlowDiagram({ nodes, orientation = 'vertical', flagged =
 
   return (
     <div
-      className={`relative border border-[var(--color-line-0)] bg-[var(--color-bg-1)] p-6 md:p-8 flex ${
+      className={`relative border border-[var(--color-line-0)] bg-[var(--color-bg-0)] p-6 md:p-8 flex ${
         isVertical ? 'flex-col gap-0' : 'flex-col md:flex-row gap-6 md:gap-0 md:items-center'
       }`}
     >

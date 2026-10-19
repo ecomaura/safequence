@@ -48,7 +48,7 @@ export default function ContactForm({ defaultService = '' }) {
     return (
       <div className="border border-[var(--color-line-0)] bg-[var(--color-bg-1)] p-10 text-center">
         <div className="mono-label mb-3">Request received</div>
-        <p className="text-lg text-[var(--color-ink-0)] font-[var(--font-display)]">
+        <p className="text-lg text-[var(--color-ink-0)] font-display font-semibold">
           Thanks — a member of our team will be in touch shortly.
         </p>
       </div>

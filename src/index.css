@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 @theme {
-  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", "Helvetica Neue", Arial, sans-serif;
   --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
@@ -10,39 +10,47 @@
 
 
 /* ---- Colour tokens: light by default -------------------------------- */
-:root {
+:root,
+.theme-light {
   --color-bg-0: #ffffff;
-  --color-bg-1: #f6f8fa;
-  --color-bg-2: #f0f3f6;
-  --color-bg-3: #e8ecf1;
+  --color-bg-1: #f3f6f9;
+  --color-bg-2: #eaf0f5;
+  --color-bg-3: #e1e9f0;
   --color-ink-0: #0b1b2b;
   --color-ink-1: #334155;
   --color-ink-2: #475569;
   --color-ink-3: #64748b;
-  --color-line-0: #e2e8f0;
-  --color-line-1: #cbd5e1;
+  --color-line-0: #dde5ee;
+  --color-line-1: #c5d1de;
   --color-accent: #0b6b85;
   --color-accent-dim: #0a566c;
   --color-accent-bright: #0d7f9e;
   --color-on-accent: #ffffff;
+  --color-warn: #b45309;
+}
+
+.theme-light {
+  background: var(--color-bg-0);
+  color: var(--color-ink-0);
 }
 
 /* ---- Dark band: add class "theme-dark" to any section --------------- */
 .theme-dark {
-  --color-bg-0: #050505;
-  --color-bg-1: #080808;
-  --color-bg-2: #0d0d0d;
-  --color-bg-3: #111113;
+  --color-bg-0: #0a2230;
+  --color-bg-1: #0d2a3a;
+  --color-bg-2: #11334a;
+  --color-bg-3: #153c54;
   --color-ink-0: #ffffff;
-  --color-ink-1: #c7c9cd;
-  --color-ink-2: #a1a1aa;
-  --color-ink-3: #8a8a92;
-  --color-line-0: #1c1c1c;
-  --color-line-1: #262626;
-  --color-accent: #35c9db;
-  --color-accent-dim: #1c7d8a;
-  --color-accent-bright: #6fe3ef;
-  --color-on-accent: #050505;
+  --color-ink-1: #cfdbe4;
+  --color-ink-2: #a9bccb;
+  --color-ink-3: #8fa5b6;
+  --color-line-0: #1b3b4f;
+  --color-line-1: #26506a;
+  --color-accent: #5fd0e0;
+  --color-accent-dim: #2f93a6;
+  --color-accent-bright: #8fe3ee;
+  --color-on-accent: #07202c;
+  --color-warn: #f5a524;
   background: var(--color-bg-0);
   color: var(--color-ink-0);
 }
@@ -100,6 +108,13 @@ body {
   font-size: 11px;
   letter-spacing: 0.09em;
   color: var(--color-ink-3);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent);
 }
 
 .hairline {

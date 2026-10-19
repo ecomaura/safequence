@@ -5,7 +5,7 @@ import { services } from '../data/services'
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="bg-[var(--color-bg-0)] border-t border-[var(--color-line-0)]">
+    <footer className="bg-[var(--color-bg-1)] border-t border-[var(--color-line-0)]">
       <div className="container-sq py-16 grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr_1fr] gap-12">
         <div className="flex flex-col gap-4">
           <Logo />

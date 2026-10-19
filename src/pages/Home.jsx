@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Seo from '../lib/Seo'
 import ScanField from '../components/ScanField'
+import FindingCard from '../components/FindingCard'
 import Button from '../components/Button'
 import ServiceCard from '../components/ServiceCard'
 import SectionHeading from '../components/SectionHeading'
@@ -38,46 +39,44 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="theme-dark relative pt-40 pb-24 md:pt-52 md:pb-32 overflow-hidden">
+      <section className="theme-dark relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
         <ScanField />
-        <div className="container-sq relative">
+        <div className="container-sq relative grid grid-cols-1 lg:grid-cols-[1.2fr_0.9fr] gap-14 lg:gap-14 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-3xl"
           >
-            <div className="mono-label mb-6">Cybersecurity testing &amp; security assessment</div>
-            <h1 className="font-[var(--font-display)] text-[2.6rem] leading-[1.05] sm:text-6xl md:text-[4.2rem] tracking-tight text-[var(--color-ink-0)]">
-              Find the weaknesses<br />before attackers do.
+            <div className="eyebrow mb-5">Cybersecurity testing &amp; security assessment</div>
+            <h1 className="font-display font-bold text-[2.6rem] leading-[1.02] sm:text-6xl md:text-[3.5rem] tracking-[-0.025em] text-balance text-[var(--color-ink-0)]">
+              Find the weaknesses<br className="hidden md:block" /> before attackers do.
             </h1>
-            <p className="mt-7 text-base md:text-lg text-[var(--color-ink-2)] leading-relaxed max-w-xl">
+            <p className="mt-6 text-base md:text-lg text-[var(--color-ink-2)] leading-relaxed max-w-[34rem]">
               Security testing and assessment for applications, networks, APIs, cloud environments
-              and Microsoft 365.
+              and Microsoft 365. Every finding comes with the evidence to prove it and the steps to fix it.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex flex-wrap items-center gap-4">
               <Button to="/contact" variant="primary">Request a Security Assessment</Button>
               <Button to="/#services" variant="ghost" onClick={(e) => {
                 e.preventDefault()
                 document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
               }}>Explore Services</Button>
             </div>
-            <div className="mt-14 text-xs tracking-wide text-[var(--color-ink-3)]">
-              Web Applications &nbsp;•&nbsp; APIs &nbsp;•&nbsp; Cloud &nbsp;•&nbsp; Microsoft 365
-            </div>
           </motion.div>
+
+          <FindingCard />
         </div>
       </section>
 
       {/* Service navigation cards */}
-      <section id="services" className="border-t border-[var(--color-line-0)]">
+      <section id="services" className="bg-[var(--color-bg-1)] scroll-mt-16">
         <div className="container-sq py-20 md:py-24">
           <SectionHeading
             eyebrow="Where we focus"
             title="Four service lines, one exposure story."
             description="Each engagement is scoped around the systems attackers actually target."
           />
-          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {services.map((s, i) => (
               <ServiceCard key={s.id} service={s} delay={i * 0.06} />
             ))}
@@ -86,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* Why EviDecode */}
-      <section id="why" className="border-t border-[var(--color-line-0)] scroll-mt-20">
+      <section id="why" className="scroll-mt-20">
         <div className="container-sq py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-14">
             <SectionHeading
@@ -94,11 +93,11 @@ export default function Home() {
               title="Security testing that holds up under scrutiny."
               description="We work the way an internal security team would want a testing partner to work — thorough, evidence-based and easy to act on."
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-9">
               {differentiators.map((d, i) => (
                 <Reveal key={d.label} delay={i * 0.07}>
-                  <div className="border-t border-[var(--color-line-0)] py-6">
-                    <h3 className="text-[var(--color-ink-0)] text-base font-medium">{d.label}</h3>
+                  <div className="border-l-2 border-[var(--color-accent)] pl-5">
+                    <h3 className="font-display font-semibold text-lg text-[var(--color-ink-0)]">{d.label}</h3>
                     <p className="mt-2 text-sm text-[var(--color-ink-2)] leading-relaxed">{d.detail}</p>
                   </div>
                 </Reveal>
@@ -109,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Security Approach / methodology */}
-      <section id="approach" className="border-t border-[var(--color-line-0)] scroll-mt-20">
+      <section id="approach" className="bg-[var(--color-bg-1)] scroll-mt-20">
         <div className="container-sq py-20 md:py-28">
           <SectionHeading
             eyebrow="Security approach"
@@ -122,42 +121,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services overview */}
-      <section className="border-t border-[var(--color-line-0)]">
-        <div className="container-sq py-20 md:py-28">
-          <SectionHeading
-            eyebrow="Services"
-            title="Security services built around real exposure."
-          />
-          <div className="mt-14 grid grid-cols-1 divide-y divide-[var(--color-line-0)] border-t border-[var(--color-line-0)]">
-            {services.map((s, i) => (
-              <Reveal key={s.id} delay={i * 0.05}>
-                <a
-                  href={s.path}
-                  className="group grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-3 md:gap-8 items-start md:items-center py-8"
-                >
-                  <span className="mono-label">{s.index}</span>
-                  <div>
-                    <h3 className="font-[var(--font-display)] text-xl text-[var(--color-ink-0)] group-hover:text-[var(--color-accent)] transition-colors">
-                      {s.name}
-                    </h3>
-                    <p className="mt-2 text-sm text-[var(--color-ink-2)] leading-relaxed max-w-2xl">{s.short}</p>
-                  </div>
-                  <svg width="18" height="18" viewBox="0 0 16 16" className="hidden md:block text-[var(--color-ink-3)] group-hover:text-[var(--color-accent)] group-hover:translate-x-1 transition-all">
-                    <path d="M4 12L12 4M12 4H5.5M12 4V10.5" stroke="currentColor" strokeWidth="1.3" fill="none" />
-                  </svg>
-                </a>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={0.1} className="mt-16 pt-10 border-t border-[var(--color-line-0)]">
-            <div className="mono-label mb-5">Additional security capabilities</div>
-            <div className="flex flex-wrap gap-x-8 gap-y-3">
+      {/* Additional capabilities */}
+      <section>
+        <div className="container-sq py-20 md:py-24">
+          <Reveal>
+            <h2 className="font-display font-semibold text-2xl md:text-3xl tracking-tight text-[var(--color-ink-0)]">
+              Additional security capabilities
+            </h2>
+            <ul className="mt-8 flex flex-wrap gap-3 list-none p-0 m-0">
               {additionalCapabilities.map((c) => (
-                <span key={c} className="text-sm text-[var(--color-ink-2)]">{c}</span>
+                <li
+                  key={c}
+                  className="px-4 py-2 text-sm text-[var(--color-ink-1)] border border-[var(--color-line-1)] bg-[var(--color-bg-0)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+                >
+                  {c}
+                </li>
               ))}
-            </div>
+            </ul>
           </Reveal>
         </div>
       </section>

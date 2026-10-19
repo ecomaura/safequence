@@ -17,7 +17,7 @@ export default function Contact() {
         <div className="container-sq relative">
           <Reveal className="max-w-2xl">
             <div className="mono-label mb-5">Contact</div>
-            <h1 className="font-[var(--font-display)] text-4xl md:text-5xl leading-[1.08] tracking-tight text-[var(--color-ink-0)]">
+            <h1 className="font-display font-semibold text-4xl md:text-5xl leading-[1.08] tracking-tight text-[var(--color-ink-0)]">
               Let's identify where your security exposure starts.
             </h1>
             <p className="mt-6 text-base md:text-lg text-[var(--color-ink-2)] leading-relaxed">
@@ -31,7 +31,7 @@ export default function Contact() {
         <div className="container-sq grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-14 items-start">
           <Reveal>
             <div className="lg:sticky lg:top-32">
-              <h2 className="font-[var(--font-display)] text-2xl text-[var(--color-ink-0)] mb-4">Start a conversation</h2>
+              <h2 className="font-display font-semibold text-2xl text-[var(--color-ink-0)] mb-4">Start a conversation</h2>
               <p className="text-sm text-[var(--color-ink-2)] leading-relaxed max-w-sm">
                 Share a few details about your environment and what you'd like assessed — VAPT, M365,
                 cloud or API security — and a consultant will follow up to scope the engagement.

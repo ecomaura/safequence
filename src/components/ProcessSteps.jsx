@@ -31,7 +31,7 @@ export default function ProcessSteps({ steps }) {
                 <div className="flex items-baseline gap-4 md:block">
                   <div className="mono-label md:mb-2">{String(i + 1).padStart(2, '0')}</div>
                   <div
-                    className="font-[var(--font-display)] text-base md:text-lg transition-colors"
+                    className="font-display font-semibold text-base md:text-lg transition-colors"
                     style={{ color: isActive ? 'var(--color-ink-0)' : 'var(--color-ink-2)' }}
                   >
                     {step.name}

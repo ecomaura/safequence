@@ -19,7 +19,7 @@ const edges = [
 
 export default function AttackSurfaceMap() {
   return (
-    <div className="relative border border-[var(--color-line-0)] bg-[var(--color-bg-1)] aspect-[4/3] p-4">
+    <div className="relative border border-[var(--color-line-0)] bg-[var(--color-bg-0)] aspect-[4/3] p-4">
       <svg viewBox="0 0 100 100" className="w-full h-full">
         {edges.map(([a, b], i) => (
           <line

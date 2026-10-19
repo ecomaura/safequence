@@ -46,7 +46,7 @@ export default function CloudSecurity() {
             <div className="mono-label mb-4">Reviewed across</div>
             <div className="flex flex-wrap gap-x-10 gap-y-3">
               {['AWS', 'Azure', 'GCP'].map((p) => (
-                <span key={p} className="font-[var(--font-display)] text-lg text-[var(--color-ink-1)]">{p}</span>
+                <span key={p} className="font-display font-semibold text-lg text-[var(--color-ink-1)]">{p}</span>
               ))}
             </div>
           </Reveal>

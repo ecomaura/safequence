@@ -18,7 +18,7 @@ export default function M365Security() {
   return (
     <>
       <Seo
-        title="Microsoft 365 Security Assessment | Safequence"
+        title="Microsoft 365 Security Assessment | EviDecode"
         description="Review identity, collaboration, email and Microsoft security controls across your Microsoft 365 environment."
         path="/m365-security"
       />

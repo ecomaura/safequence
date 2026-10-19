@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Safequence | Cybersecurity Testing & Security Assessment"
+        title="EviDecode | Cybersecurity Testing & Security Assessment"
         description="Security testing and assessment for applications, networks, APIs, cloud environments and Microsoft 365."
         path="/"
       />
@@ -85,12 +85,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Safequence */}
+      {/* Why EviDecode */}
       <section id="why" className="border-t border-[var(--color-line-0)] scroll-mt-20">
         <div className="container-sq py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-14">
             <SectionHeading
-              eyebrow="Why Safequence"
+              eyebrow="Why EviDecode"
               title="Security testing that holds up under scrutiny."
               description="We work the way an internal security team would want a testing partner to work — thorough, evidence-based and easy to act on."
             />

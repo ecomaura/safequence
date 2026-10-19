@@ -43,7 +43,7 @@ export default function Vapt() {
   return (
     <>
       <Seo
-  title="VAPT Services | Safequence"
+  title="VAPT Services | EviDecode"
   description="Vulnerability assessment and penetration testing across web, mobile, network and infrastructure to find and validate real-world risk."
   path="/vapt"
 />

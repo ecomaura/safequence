@@ -7,7 +7,7 @@ const FALLBACK_EMAIL = 'contact@safequence.com'
 const steps = [
   {
     key: 'name',
-    ask: () => "Hi! I'm the Safequence assistant. I can pass your inquiry to our team. What's your name?",
+    ask: () => "Hi! I'm the EviDecode assistant. I can pass your inquiry to our team. What's your name?",
     validate: (v) => v.length >= 2,
     error: 'Could you tell me your name?',
   },
@@ -129,11 +129,11 @@ export default function ChatWidget() {
       {open && (
         <div
           role="dialog"
-          aria-label="Chat with Safequence"
+          aria-label="Chat with EviDecode"
           className="mb-3 w-[calc(100vw-2.5rem)] sm:w-[360px] h-[min(480px,calc(100dvh-7rem))] flex flex-col border border-[var(--color-line-1)] bg-[var(--color-bg-1)] shadow-2xl"
         >
           <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--color-line-0)]">
-            <span className="mono-label">Safequence Assistant</span>
+            <span className="mono-label">EviDecode Assistant</span>
             <button
               onClick={() => setOpen(false)}
               aria-label="Close chat"

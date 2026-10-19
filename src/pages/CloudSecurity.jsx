@@ -26,7 +26,7 @@ export default function CloudSecurity() {
   return (
     <>
       <Seo
-        title="Cloud Security Assessment | Safequence"
+        title="Cloud Security Assessment | EviDecode"
         description="Identify misconfigurations, excessive permissions, exposed services and architectural weaknesses across your cloud environment."
         path="/cloud-security"
       />

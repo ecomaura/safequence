@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 /**
- * Renders the Safequence wordmark from /public/logo.svg.
+ * Renders the EviDecode wordmark from /public/logo.svg.
  *
  * NOTE: No logo asset was supplied with this build, so /public/logo.svg
  * is a placeholder mark. Drop the real "download (1).svg" asset into
@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom'
  */
 export default function Logo({ className = 'h-32 md:h-40 w-auto' }) {
   return (
-    <Link to="/" aria-label="Safequence — home" className="inline-flex items-center">
-      <img src="/logo.svg" alt="Safequence" className={className} />
+    <Link to="/" aria-label="EviDecode — home" className="inline-flex items-center">
+      <img src="/logo.svg" alt="EviDecode" className={className} />
     </Link>
   )
 }

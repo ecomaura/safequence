@@ -23,7 +23,7 @@ export default function ApiSecurity() {
   return (
     <>
       <Seo
-        title="API Security Testing | Safequence"
+        title="API Security Testing | EviDecode"
         description="Assess APIs for authorization flaws, data exposure, authentication weaknesses and abuse scenarios."
         path="/api-security"
       />

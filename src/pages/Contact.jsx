@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact | Safequence"
+        title="Contact | EviDecode"
         description="Request a security assessment for your applications, networks, APIs, cloud environment or Microsoft 365 tenant."
         path="/contact"
       />

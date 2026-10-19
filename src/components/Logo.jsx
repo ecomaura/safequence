@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom'
 
 /**
- * Renders the EviDecode wordmark from /public/logo.svg (white wordmark for the dark theme).
- *
- * NOTE: No logo asset was supplied with this build, so /public/logo.svg
- * is a placeholder mark. Drop the real "download (1).svg" asset into
- * /public/logo.svg (keeping the same filename) to swap it in — every
- * usage across the navbar and footer points at this one file.
+ * Renders the EviDecode wordmark from /public/logo.svg (white, transparent
+ * background, traced from the supplied logo for the dark theme). Every usage
+ * across the navbar and footer points at this one file.
  */
-export default function Logo({ className = 'h-5 md:h-[26px] w-auto' }) {
+export default function Logo({ className = 'h-6 md:h-8 w-auto' }) {
   return (
     <Link to="/" aria-label="EviDecode — home" className="inline-flex items-center">
       <img src="/logo.svg" alt="EviDecode" className={className} />

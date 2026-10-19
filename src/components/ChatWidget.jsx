@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { serviceOptions } from '../data/services'
 import { trackLead } from '../lib/track'
 
-const FALLBACK_EMAIL = 'contact@safequence.com'
+const FALLBACK_EMAIL = 'contact@evidecode.com'
 
 const steps = [
   {

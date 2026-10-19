@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 const SITE_NAME = 'EviDecode'
-const SITE_URL = 'https://www.safequence.com'
+const SITE_URL = 'https://www.evidecode.com'
 
 function setMeta(name, content, attr = 'name') {
   if (!content) return

@@ -97,3 +97,23 @@ export const serviceOptions = [
   'API Security',
   'Other',
 ]
+
+// Why-EviDecode points (used on the home page and in the prerendered HTML).
+export const differentiators = [
+  {
+    label: 'Independent by design',
+    detail: 'We test and report without a stake in the platforms or vendors we assess — findings are ours alone.',
+  },
+  {
+    label: 'Manual, expert-led testing',
+    detail: 'Automated scanning is a starting point, not the deliverable. Our consultants manually validate every finding.',
+  },
+  {
+    label: 'Risk-rated, not noise',
+    detail: 'Every issue is prioritized by real business impact, so your team fixes what matters first.',
+  },
+  {
+    label: 'Built for decision-makers',
+    detail: 'Executive-ready summaries sit alongside the technical evidence engineers need to remediate.',
+  },
+]

@@ -17,11 +17,7 @@ const areas = [
 export default function M365Security() {
   return (
     <>
-      <Seo
-        title="Microsoft 365 Security Assessment | EviDecode"
-        description="Review identity, collaboration, email and Microsoft security controls across your Microsoft 365 environment."
-        path="/m365-security"
-      />
+      <Seo path="/m365-security" />
 
       <PageHero
         eyebrow="M365 Security"

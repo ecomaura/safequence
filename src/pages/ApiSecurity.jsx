@@ -22,11 +22,7 @@ const remediation = [
 export default function ApiSecurity() {
   return (
     <>
-      <Seo
-        title="API Security Testing | EviDecode"
-        description="Assess APIs for authorization flaws, data exposure, authentication weaknesses and abuse scenarios."
-        path="/api-security"
-      />
+      <Seo path="/api-security" />
 
       <PageHero
         eyebrow="API Security"

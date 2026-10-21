@@ -6,11 +6,7 @@ import Reveal from '../components/Reveal'
 export default function Contact() {
   return (
     <>
-      <Seo
-        title="Contact | EviDecode"
-        description="Request a security assessment for your applications, networks, APIs, cloud environment or Microsoft 365 tenant."
-        path="/contact"
-      />
+      <Seo path="/contact" />
 
       <section className="relative pt-40 pb-16 md:pt-48 overflow-hidden">
         <ScanField />

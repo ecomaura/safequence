@@ -8,6 +8,7 @@ import M365Security from './pages/M365Security'
 import CloudSecurity from './pages/CloudSecurity'
 import ApiSecurity from './pages/ApiSecurity'
 import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 import ChatWidget from './components/ChatWidget'
 
 function ScrollToTop() {
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/cloud-security" element={<CloudSecurity />} />
           <Route path="/api-security" element={<ApiSecurity />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
            <Footer />

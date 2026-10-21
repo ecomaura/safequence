@@ -6,35 +6,12 @@ import SectionHeading from '../components/SectionHeading'
 import MethodologyTimeline from '../components/MethodologyTimeline'
 import Reveal from '../components/Reveal'
 import CtaBand from '../components/CtaBand'
-import { services, additionalCapabilities } from '../data/services'
-
-const differentiators = [
-  {
-    label: 'Independent by design',
-    detail: 'We test and report without a stake in the platforms or vendors we assess — findings are ours alone.',
-  },
-  {
-    label: 'Manual, expert-led testing',
-    detail: 'Automated scanning is a starting point, not the deliverable. Our consultants manually validate every finding.',
-  },
-  {
-    label: 'Risk-rated, not noise',
-    detail: 'Every issue is prioritized by real business impact, so your team fixes what matters first.',
-  },
-  {
-    label: 'Built for decision-makers',
-    detail: 'Executive-ready summaries sit alongside the technical evidence engineers need to remediate.',
-  },
-]
+import { services, additionalCapabilities, differentiators } from '../data/services'
 
 export default function Home() {
   return (
     <>
-      <Seo
-        title="EviDecode | Cybersecurity Testing & Security Assessment"
-        description="Security testing and assessment for applications, networks, APIs, cloud environments and Microsoft 365."
-        path="/"
-      />
+      <Seo path="/" />
 
       {/* Hero */}
       <section className="relative overflow-hidden pt-36 pb-24 md:pt-48 md:pb-36 min-h-[620px] md:min-h-[720px] flex items-center">

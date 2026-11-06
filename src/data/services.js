@@ -98,7 +98,7 @@ export const serviceOptions = [
   'Other',
 ]
 
-// Why-EviDecode points (used on the home page and in the prerendered HTML).
+// Why-KeyPrefer points (used on the home page and in the prerendered HTML).
 export const differentiators = [
   {
     label: 'Independent by design',

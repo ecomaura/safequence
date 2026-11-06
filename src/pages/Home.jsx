@@ -72,12 +72,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why EviDecode */}
+      {/* Why KeyPrefer */}
       <section id="why" className="scroll-mt-20">
         <div className="container-sq py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-14">
             <SectionHeading
-              eyebrow="Why EviDecode"
+              eyebrow="Why KeyPrefer"
               title="Security testing that holds up under scrutiny."
               description="We work the way an internal security team would want a testing partner to work — thorough, evidence-based and easy to act on."
             />

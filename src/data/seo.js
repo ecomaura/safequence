@@ -3,7 +3,7 @@
 // Plain JS on purpose: no JSX or aliases, so Node can import it directly.
 
 export const SITE = {
-  name: 'EviDecode',
+  name: 'KeyPrefer',
   url: 'https://www.evidecode.com',
   email: 'contact@evidecode.com',
   image: '/og-image.jpg', // 1200x630 share image
@@ -13,7 +13,7 @@ export const SITE = {
 
 export const PAGES = {
   '/': {
-    title: 'EviDecode | Cybersecurity Testing & Security Assessment',
+    title: 'KeyPrefer | Cybersecurity Testing & Security Assessment',
     description:
       'Security testing and assessment for applications, networks, APIs, cloud environments and Microsoft 365.',
     h1: 'Find the weaknesses before attackers do.',
@@ -21,7 +21,7 @@ export const PAGES = {
     file: 'index.html',
   },
   '/vapt': {
-    title: 'VAPT Services | EviDecode',
+    title: 'VAPT Services | KeyPrefer',
     description:
       'Vulnerability assessment and penetration testing across web, mobile, network and infrastructure to find and validate real-world risk.',
     h1: 'Vulnerability Assessment & Penetration Testing',
@@ -30,7 +30,7 @@ export const PAGES = {
     file: 'vapt.html',
   },
   '/m365-security': {
-    title: 'Microsoft 365 Security Assessment | EviDecode',
+    title: 'Microsoft 365 Security Assessment | KeyPrefer',
     description:
       'Review identity, collaboration, email and Microsoft security controls across your Microsoft 365 environment.',
     h1: 'Microsoft 365 Security Assessment',
@@ -39,7 +39,7 @@ export const PAGES = {
     file: 'm365-security.html',
   },
   '/cloud-security': {
-    title: 'Cloud Security Assessment | EviDecode',
+    title: 'Cloud Security Assessment | KeyPrefer',
     description:
       'Identify misconfigurations, excessive permissions, exposed services and architectural weaknesses across your cloud environment.',
     h1: 'Cloud Security Assessment',
@@ -48,7 +48,7 @@ export const PAGES = {
     file: 'cloud-security.html',
   },
   '/api-security': {
-    title: 'API Security Testing | EviDecode',
+    title: 'API Security Testing | KeyPrefer',
     description:
       'Assess APIs for authorization flaws, data exposure, authentication weaknesses and abuse scenarios.',
     h1: 'API Security Testing',
@@ -57,7 +57,7 @@ export const PAGES = {
     file: 'api-security.html',
   },
   '/contact': {
-    title: 'Contact | EviDecode',
+    title: 'Contact | KeyPrefer',
     description:
       'Request a security assessment for your applications, networks, APIs, cloud environment or Microsoft 365 tenant.',
     h1: "Let's identify where your security exposure starts.",
@@ -67,7 +67,7 @@ export const PAGES = {
 }
 
 export const NOT_FOUND = {
-  title: 'Page not found | EviDecode',
+  title: 'Page not found | KeyPrefer',
   description: 'The page you are looking for does not exist.',
   h1: 'Page not found',
   file: '404.html',

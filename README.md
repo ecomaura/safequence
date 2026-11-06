@@ -1,6 +1,6 @@
-# EviDecode
+# KeyPrefer
 
-A premium, black/near-black React marketing site for EviDecode, a cybersecurity
+A premium, dark-themed React marketing site for KeyPrefer, a cybersecurity
 testing and assessment consultancy.
 
 ## Stack
@@ -34,7 +34,7 @@ src/
 
 No logo asset was supplied with this build. `public/logo.svg` is a placeholder
 wordmark used across the navbar and footer via `src/components/Logo.jsx`.
-Replace `public/logo.svg` with the real EviDecode mark (same filename) to swap
+Replace `public/logo.svg` with the real KeyPrefer mark (same filename) to swap
 it in everywhere at once — no other code changes needed.
 
 ## Content

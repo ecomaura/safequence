@@ -30,7 +30,7 @@ export default function Footer() {
         <div>
           <div className="mono-label mb-4">Company</div>
           <ul className="flex flex-col gap-3">
-            <li><a href="/#why" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Why EviDecode</a></li>
+            <li><a href="/#why" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Why KeyPrefer</a></li>
             <li><a href="/#approach" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Security Approach</a></li>
             <li><Link to="/contact" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Contact</Link></li>
           </ul>
@@ -49,7 +49,7 @@ export default function Footer() {
 
       <div className="border-t border-[var(--color-line-0)]">
         <div className="container-sq py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <p className="text-xs text-[var(--color-ink-3)]">© {year} EviDecode. All rights reserved.</p>
+          <p className="text-xs text-[var(--color-ink-3)]">© {year} KeyPrefer. All rights reserved.</p>
           <p className="text-xs text-[var(--color-ink-3)]">VAPT · APIs · Cloud · Microsoft 365</p>
         </div>
       </div>

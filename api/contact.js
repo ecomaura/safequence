@@ -130,9 +130,9 @@ export default async function handler(req, res) {
       await sendEmail({
         from: CONTACT_FROM_EMAIL,
         to: [email],
-        subject: 'We received your inquiry — EviDecode',
-        html: `<p style="font-family:Arial,sans-serif;font-size:14px">Hi ${esc(name)},<br><br>Thanks for reaching out. A member of our team will get back to you shortly.<br><br>— EviDecode</p>`,
-        text: `Hi ${name},\n\nThanks for reaching out. A member of our team will get back to you shortly.\n\n— EviDecode`,
+        subject: 'We received your inquiry — KeyPrefer',
+        html: `<p style="font-family:Arial,sans-serif;font-size:14px">Hi ${esc(name)},<br><br>Thanks for reaching out. A member of our team will get back to you shortly.<br><br>— KeyPrefer</p>`,
+        text: `Hi ${name},\n\nThanks for reaching out. A member of our team will get back to you shortly.\n\n— KeyPrefer`,
       })
     } catch (err) {
       console.error('Auto-reply failed', err)

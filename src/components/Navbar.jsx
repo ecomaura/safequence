@@ -5,7 +5,7 @@ import Logo from './Logo'
 import { services } from '../data/services'
 
 const navLinks = [
-  { label: 'Why EviDecode', to: '/#why' },
+  { label: 'Why KeyPrefer', to: '/#why' },
   { label: 'Security Approach', to: '/#approach' },
   { label: 'Contact', to: '/contact' },
 ]

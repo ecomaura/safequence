@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://www.evidecode.com/sitemap.xml
+Sitemap: https://www.keyprefer.com/sitemap.xml

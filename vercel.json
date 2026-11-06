@@ -5,6 +5,24 @@
     "api/contact.js": { "maxDuration": 30 }
   },
   "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "keyprefer.com" }],
+      "destination": "https://www.keyprefer.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "evidecode.com" }],
+      "destination": "https://www.keyprefer.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.evidecode.com" }],
+      "destination": "https://www.keyprefer.com/$1",
+      "permanent": true
+    },
     { "source": "/web-vapt", "destination": "/vapt", "permanent": true }
   ]
 }

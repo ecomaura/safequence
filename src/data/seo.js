@@ -4,8 +4,8 @@
 
 export const SITE = {
   name: 'KeyPrefer',
-  url: 'https://www.evidecode.com',
-  email: 'contact@evidecode.com',
+  url: 'https://www.keyprefer.com',
+  email: 'contact@keyprefer.com',
   image: '/og-image.jpg', // 1200x630 share image
   logo: '/icon-512.png',
   tagline: 'Cybersecurity testing & security assessment',
@@ -21,7 +21,7 @@ export const PAGES = {
     file: 'index.html',
   },
   '/vapt': {
-    title: 'VAPT Services | KeyPrefer',
+    title: 'Penetration Testing & VAPT Services | KeyPrefer',
     description:
       'Vulnerability assessment and penetration testing across web, mobile, network and infrastructure to find and validate real-world risk.',
     h1: 'Vulnerability Assessment & Penetration Testing',
@@ -48,7 +48,7 @@ export const PAGES = {
     file: 'cloud-security.html',
   },
   '/api-security': {
-    title: 'API Security Testing | KeyPrefer',
+    title: 'API Security Testing & Assessment | KeyPrefer',
     description:
       'Assess APIs for authorization flaws, data exposure, authentication weaknesses and abuse scenarios.',
     h1: 'API Security Testing',
@@ -57,7 +57,7 @@ export const PAGES = {
     file: 'api-security.html',
   },
   '/contact': {
-    title: 'Contact | KeyPrefer',
+    title: 'Contact KeyPrefer | Request a Security Assessment',
     description:
       'Request a security assessment for your applications, networks, APIs, cloud environment or Microsoft 365 tenant.',
     h1: "Let's identify where your security exposure starts.",

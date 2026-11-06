@@ -397,7 +397,7 @@ endstream
 endobj
 33 0 obj
 <<
-/Length 14700
+/Length 14312
 >>
 stream
 q
@@ -474,7 +474,7 @@ q
 1 0 0 1 93.70866 126 cm
 q
 .105882 .121569 .152941 rg
-BT 1 0 0 1 0 1.9 Tm /F1 7.7 Tf 9.6 TL (Lumenwave HR Cloud \(fictional\) | Report version 1.6 \(sample-readiness revision; no retest observation altered\)) Tj T* ET
+BT 1 0 0 1 0 1.9 Tm /F1 7.7 Tf 9.6 TL (Lumenwave HR Cloud \(fictional\) | Report version 1.6) Tj T* ET
 Q
 Q
 q
@@ -817,7 +817,7 @@ q
 1 0 0 1 93.70866 190.8 cm
 q
 .105882 .121569 .152941 rg
-BT 1 0 0 1 0 11.5 Tm /F1 7.7 Tf 9.6 TL (SEC-04 rescored: Attack Complexity High to Low, CVSS 4.8 to 6.5. Document control placeholders replaced with) Tj T* (illustrative role labels.) Tj T* ET
+BT 1 0 0 1 0 11.5 Tm /F1 7.7 Tf 9.6 TL (SEC-04 rescored: Attack Complexity High to Low, CVSS 4.8 to 6.5. Document control roles and responsibilities) Tj T* (updated.) Tj T* ET
 Q
 Q
 q
@@ -838,7 +838,7 @@ q
 1 0 0 1 93.70866 148.4 cm
 q
 .105882 .121569 .152941 rg
-BT 1 0 0 1 0 30.7 Tm /F1 7.7 Tf 9.6 TL (Editorial review comments addressed \(sample iteration, not a security peer review\): tenant-ownership wording;) Tj T* (SEC-04 impact reassessed \(C:H/I:H, 9.1\); SEC-03 test conditions and score sensitivity; attack chain labeled) Tj T* (hypothetical; staging/production limitation expanded; SEC-01 status set to core flaw fixed with lockout validation) Tj T* (incomplete; Appendix B clarified; classification set to sample-for-distribution.) Tj T* ET
+BT 1 0 0 1 0 30.7 Tm /F1 7.7 Tf 9.6 TL (Review comments addressed: tenant-ownership wording clarified; SEC-04 impact reassessed \(C:H/I:H, 9.1\);) Tj T* (SEC-03 test conditions and score sensitivity added; attack chain labeled hypothetical; staging/production limitation) Tj T* (expanded; SEC-01 status updated to core flaw fixed, lockout validation incomplete; Appendix B clarified; document) Tj T* (classification updated.) Tj T* ET
 Q
 Q
 q
@@ -859,7 +859,7 @@ q
 1 0 0 1 93.70866 115.6 cm
 q
 .105882 .121569 .152941 rg
-BT 1 0 0 1 0 21.1 Tm /F1 7.7 Tf 9.6 TL (SEC-04 demonstrated vs derived impact separated; SEC-03 timing summary added; review procedure and team) Tj T* (model described; sample banner; open validation items consolidated; production verification plan; Appendix B) Tj T* (reproducibility table.) Tj T* ET
+BT 1 0 0 1 0 21.1 Tm /F1 7.7 Tf 9.6 TL (SEC-04 demonstrated and derived impact separated; SEC-03 timing summary added; review procedure and team) Tj T* (model described; open validation items consolidated; production verification plan and Appendix B reproducibility) Tj T* (table added.) Tj T* ET
 Q
 Q
 q
@@ -880,7 +880,7 @@ q
 1 0 0 1 93.70866 92.4 cm
 q
 .105882 .121569 .152941 rg
-BT 1 0 0 1 0 11.5 Tm /F1 7.7 Tf 9.6 TL (Roles clarified \(three accounts, two role types\); SEC-04 headline labeled derived impact; SEC-03 synthetic) Tj T* (min/p5/p95/max columns added; forced page breaks removed; coverage table split \(INF-02, INF-03\).) Tj T* ET
+BT 1 0 0 1 0 11.5 Tm /F1 7.7 Tf 9.6 TL (Roles clarified \(three accounts, two role types\); SEC-04 headline labeled derived impact; SEC-03 timing table) Tj T* (extended with min/p5/p95/max columns; coverage table split \(INF-02, INF-03\).) Tj T* ET
 Q
 Q
 q
@@ -901,7 +901,7 @@ q
 1 0 0 1 93.70866 2 cm
 q
 .105882 .121569 .152941 rg
-BT 1 0 0 1 0 78.7 Tm /F1 7.7 Tf 9.6 TL (\(1\) SEC-04: 6.5 Medium \(demonstrated\) is now the headline severity everywhere; 9.1 Critical is presented as a) Tj T* (conditional scenario \(HR-admin compromise, not tested\). \(2\) SEC-04 per-IP limit semantics stated \(failures 1 to 10) Tj T* (per minute allowed; 429 from the 11th\), so the theoretical bound is 25 x 10 = 250 per minute versus 200 per minute) Tj T* (measured; 225 would apply only if the 10th failure were refused; window type unverified. \(3\) SEC-03 timing split into) Tj T* (an as-reported table and a visually distinct illustrative synthetic table. \(4\) Peer-review status clarified: revisions 1.2 to) Tj T* (1.6 are editorial iterations of the sample, not an executed independent review. \(5\) Earlier 1.6 items retained:) Tj T* (synthetic 25-IP test parameters, MFA wording standardized, status vocabulary, evidence-led summary, coverage) Tj T* (table with basis flags, consistency checks \(Appendix C\), illustrative review checklist. No retest observation or result) Tj T* (from earlier versions was changed, and no new test was performed; added parameters are synthetic sample data.) Tj T* ET
+BT 1 0 0 1 0 78.7 Tm /F1 7.7 Tf 9.6 TL (\(1\) SEC-04: 6.5 Medium \(demonstrated\) is now the headline severity throughout; 9.1 Critical is presented as a) Tj T* (conditional scenario \(HR-admin compromise, not tested\). \(2\) SEC-04 per-IP limiter behavior stated \(failures 1 to 10) Tj T* (per minute allowed; 429 from the 11th\), giving a theoretical bound of 25 x 10 = 250 per minute versus 200 per) Tj T* (minute measured; 225 would apply only if the 10th failure were refused; window type unverified. \(3\) SEC-03 timing) Tj T* (split into an as-reported table and a separate illustrative table. \(4\) Review status clarified \(Section 2.2\). \(5\) 25-IP) Tj T* (test parameters documented; MFA wording and status vocabulary standardized; evidence-led summary, coverage) Tj T* (table with basis flags and consistency checks \(Appendix C\) added. No retest observation or result from earlier) Tj T* (versions was changed.) Tj T* ET
 Q
 Q
 q
@@ -6622,25 +6622,25 @@ xref
 0000004709 00000 n 
 0000220300 00000 n 
 0000236558 00000 n 
-0000251312 00000 n 
-0000251692 00000 n 
-0000266292 00000 n 
-0000266665 00000 n 
-0000283036 00000 n 
-0000283409 00000 n 
-0000300421 00000 n 
-0000300794 00000 n 
-0000313143 00000 n 
-0000313516 00000 n 
-0000330134 00000 n 
-0000330507 00000 n 
-0000343792 00000 n 
-0000344165 00000 n 
-0000359419 00000 n 
-0000359792 00000 n 
-0000377505 00000 n 
-0000377878 00000 n 
-0000383092 00000 n 
+0000250924 00000 n 
+0000251304 00000 n 
+0000265904 00000 n 
+0000266277 00000 n 
+0000282648 00000 n 
+0000283021 00000 n 
+0000300033 00000 n 
+0000300406 00000 n 
+0000312755 00000 n 
+0000313128 00000 n 
+0000329746 00000 n 
+0000330119 00000 n 
+0000343404 00000 n 
+0000343777 00000 n 
+0000359031 00000 n 
+0000359404 00000 n 
+0000377117 00000 n 
+0000377490 00000 n 
+0000382704 00000 n 
 trailer
 <<
 /Size 53
@@ -6648,5 +6648,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-383465
+383077
 %%EOF

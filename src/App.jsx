@@ -7,6 +7,7 @@ import Vapt from './pages/Vapt'
 import M365Security from './pages/M365Security'
 import CloudSecurity from './pages/CloudSecurity'
 import ApiSecurity from './pages/ApiSecurity'
+import SampleReport from './pages/SampleReport'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import ChatWidget from './components/ChatWidget'
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/m365-security" element={<M365Security />} />
           <Route path="/cloud-security" element={<CloudSecurity />} />
           <Route path="/api-security" element={<ApiSecurity />} />
+          <Route path="/sample-report" element={<SampleReport />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

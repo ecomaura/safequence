@@ -7,6 +7,7 @@ import { services } from '../data/services'
 const navLinks = [
   { label: 'Why KeyPrefer', to: '/#why' },
   { label: 'Security Approach', to: '/#approach' },
+  { label: 'Sample Report', to: '/sample-report' },
   { label: 'Contact', to: '/contact' },
 ]
 

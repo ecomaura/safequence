@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { SITE, PAGES, NOT_FOUND, canonicalFor, absolute, jsonLd } from '../src/data/seo.js'
+import { SAMPLE_REPORT } from '../src/data/sampleReport.js'
 import { services, methodology, additionalCapabilities, differentiators } from '../src/data/services.js'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
@@ -45,7 +46,7 @@ function headTags(path, page, { notFound = false } = {}) {
 
 const nav = `<nav aria-label="Primary"><a href="/">${SITE.name}</a> · ${services
   .map((s) => `<a href="${s.path}">${esc(s.nav)}</a>`)
-  .join(' · ')} · <a href="/contact">Contact</a></nav>`
+  .join(' · ')} · <a href="/sample-report">Sample Report</a> · <a href="/contact">Contact</a></nav>`
 
 function body(path, page) {
   const intro = `<h1>${esc(page.h1)}</h1><p>${esc(page.description)}</p>`
@@ -70,6 +71,16 @@ function body(path, page) {
       .filter((s) => s.path !== path)
       .map((s) => `<li><a href="${s.path}">${esc(s.fullName)}</a> — ${esc(s.short)}</li>`)
       .join('')}</ul>`
+  } else if (page.kind === 'sample') {
+    main += `<p><a href="${SAMPLE_REPORT.pdf.href}">Download the sample report (PDF, ${SAMPLE_REPORT.pdf.pages} pages)</a></p>
+<p>Fictional client, synthetic data. Not a record of a real engagement.</p>
+<h2>What's inside</h2><ul>${SAMPLE_REPORT.inside
+      .map((i) => `<li><strong>${esc(i.label)}.</strong> ${esc(i.detail)}</li>`)
+      .join('')}</ul>
+<h2>Findings at a glance</h2><ul>${SAMPLE_REPORT.findings
+      .map((f) => `<li>${esc(f.id)}: ${esc(f.title)} (${esc(f.severity)} ${esc(f.score)}). ${esc(f.status)}.</li>`)
+      .join('')}</ul>
+<p><a href="/contact">Request a security assessment</a></p>`
   } else if (page.kind === 'contact') {
     main += `<p>Email us at <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>`
   } else {

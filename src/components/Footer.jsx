@@ -32,6 +32,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-3">
             <li><a href="/#why" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Why KeyPrefer</a></li>
             <li><a href="/#approach" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Security Approach</a></li>
+            <li><Link to="/sample-report" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Sample Report</Link></li>
             <li><Link to="/contact" className="text-sm text-[var(--color-ink-1)] hover:text-[var(--color-ink-0)] transition-colors">Contact</Link></li>
           </ul>
         </div>

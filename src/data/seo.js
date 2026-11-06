@@ -56,6 +56,15 @@ export const PAGES = {
     name: 'API Security Testing',
     file: 'api-security.html',
   },
+  '/sample-report': {
+    title: 'Sample Penetration Test Report | KeyPrefer',
+    description:
+      'Download a sample KeyPrefer penetration test report: executive summary, CVSS-scored findings with evidence, remediation guidance and retest results.',
+    h1: 'See what a KeyPrefer penetration test report looks like.',
+    kind: 'sample',
+    name: 'Sample Penetration Test Report',
+    file: 'sample-report.html',
+  },
   '/contact': {
     title: 'Contact KeyPrefer | Request a Security Assessment',
     description:
@@ -109,6 +118,25 @@ export function jsonLd(path) {
         url: canonicalFor(path),
         serviceType: 'Cybersecurity assessment',
         provider: { '@id': orgId },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/` },
+          { '@type': 'ListItem', position: 2, name: page.name, item: canonicalFor(path) },
+        ],
+      },
+    )
+  }
+  if (page?.kind === 'sample') {
+    graph.push(
+      {
+        '@type': 'WebPage',
+        '@id': `${canonicalFor(path)}#webpage`,
+        url: canonicalFor(path),
+        name: page.title,
+        description: page.description,
+        isPartOf: { '@id': `${SITE.url}/#website` },
       },
       {
         '@type': 'BreadcrumbList',
